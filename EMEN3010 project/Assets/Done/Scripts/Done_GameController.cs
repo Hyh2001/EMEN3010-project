@@ -11,9 +11,9 @@ public class Done_GameController : MonoBehaviour
 	public float startWait;
 	public float waveWait;
 	
-	public GUIText scoreText;
-	public GUIText restartText;
-	public GUIText gameOverText;
+	public UnityEngine.UI.Text scoreText;
+	public UnityEngine.UI.Text restartText;
+	public UnityEngine.UI.Text gameOverText;
 	
 	private bool gameOver;
 	private bool restart;
