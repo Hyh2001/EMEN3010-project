@@ -16,4 +16,8 @@ public class Asteroid : MonoBehaviour
     {
         transform.Translate(Vector2.down * 2* Time.deltaTime, Space.World);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Gameover");
+    }
 }

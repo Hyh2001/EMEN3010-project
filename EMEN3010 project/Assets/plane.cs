@@ -66,7 +66,7 @@ public class plane : MonoBehaviour
 
 
         // the second part will be shoot bullets out
-
+        
 
 
     }
