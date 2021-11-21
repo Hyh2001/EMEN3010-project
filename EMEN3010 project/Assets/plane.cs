@@ -9,8 +9,7 @@ public class plane : MonoBehaviour
     float speed = 50.0f;
     Vector2 worldPosLeftBottom;
     Vector2 worldPosTopRight;
-    public GameObject bulletPrefab;
-    public float ReloadDelay = 0.2f;
+    float ReloadDelay = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,15 +67,8 @@ public class plane : MonoBehaviour
 
 
         // the second part will be shoot bullets out
-//<<<<<<< HEAD
-        
-//=======
-     
-        if (Input.GetButton("Fire1") || Input.GetKey("z"))
-       {
-          Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-       }
-//>>>>>>> 596761a0752235549dc789009ded9826de626858
+
+   
 
 
     }
