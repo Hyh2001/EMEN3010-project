@@ -6,10 +6,10 @@ public class plane : MonoBehaviour
 {
     Rigidbody2D plane1;
     float force = 50.0f;
-    float speed = 50.0f;
+    float speed = 100.0f;
     Vector2 worldPosLeftBottom;
     Vector2 worldPosTopRight;
-    float ReloadDelay = 0.2f;
+    public GameObject bulletPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +68,7 @@ public class plane : MonoBehaviour
 
         // the second part will be shoot bullets out
 
-<<<<<<< HEAD
+
         
 
      
@@ -76,9 +76,7 @@ public class plane : MonoBehaviour
        {
           Instantiate(bulletPrefab, transform.position, Quaternion.identity);
        }
-=======
-   
->>>>>>> d1b41b59a456c28bbbcc48c45cc5afd2367f468f
+
 
 
     }

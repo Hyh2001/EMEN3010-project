@@ -4,20 +4,37 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    float Speed = 30.0f;
-    public Rigidbody2D bullets;
+    public float Speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        bullets.GetComponent<Rigidbody2D>();
-        bullets.velocity = transform.up * Speed;
-        Destroy(gameObject);
+        
+    }
+    //bullet scan
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        
+        if (col.gameObject.tag == "Enemy")
+        {
+           
+            Destroy(col.gameObject);
+
+            
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.Translate(Vector2.up * 2 * Time.deltaTime, Space.World);
+
+
+        if (transform.position.y >= 5f)
+        {
+            Destroy(gameObject);
+        }
 
     }
 }
