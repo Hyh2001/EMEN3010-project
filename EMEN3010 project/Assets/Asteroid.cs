@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Asteroid : MonoBehaviour
 {
@@ -16,10 +15,5 @@ public class Asteroid : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.down * 2* Time.deltaTime, Space.World);
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("Gameover");
-        SceneManager.LoadScene("SceneGameover");
     }
 }

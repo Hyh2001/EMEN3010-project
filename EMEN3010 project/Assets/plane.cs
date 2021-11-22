@@ -1,6 +1,7 @@
   using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class plane : MonoBehaviour
 {
@@ -67,6 +68,11 @@ public class plane : MonoBehaviour
 
 
         // the second part will be shoot bullets out
-
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            Debug.Log("Gameover");
+            SceneManager.LoadScene("SceneGameover");
+        }
+        //end the game while crash
     }
 }
