@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class weapon : MonoBehaviour
 {
-    public float Speed;
+    GameObject bullets;
     // Start is called before the first frame update
     void Start()
     {
-        
+        bullet = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, Speed, 0) * Time.deltaTime;
-        if (transform.position.y >= 5f)
-        {
-            Destroy(gameObject);
+        if(Input.GetKeyDown(KeyCode.Space)){
+            shoot();
         }
+    }
+    void shoot()
+    {
+        Instantiate(bullets,bullet)
+
     }
 }
