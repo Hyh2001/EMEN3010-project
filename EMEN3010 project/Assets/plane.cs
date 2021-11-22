@@ -7,10 +7,10 @@ public class plane : MonoBehaviour
 {
     Rigidbody2D plane1;
     float force = 50.0f;
-    float speed = 50.0f;
+    float speed = 100.0f;
     Vector2 worldPosLeftBottom;
     Vector2 worldPosTopRight;
-    float ReloadDelay = 0.2f;
+    public GameObject bulletPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,11 +68,25 @@ public class plane : MonoBehaviour
 
 
         // the second part will be shoot bullets out
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            Debug.Log("Gameover");
-            SceneManager.LoadScene("SceneGameover");
-        }
-        //end the game while crash
+
+
+
+
+        
+
+     
+        if (Input.GetKeyDown("z"))
+       {
+          Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+       }
+
+
+
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Gameover");
+        SceneManager.LoadScene("SceneGameover");
+    }
+    //end the game while crash
 }

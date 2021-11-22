@@ -9,18 +9,18 @@ public class bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     //bullet scan
     private void OnTriggerEnter2D(Collider2D col)
     {
-        
+
         if (col.gameObject.tag == "Enemy")
         {
-           
+
             Destroy(col.gameObject);
 
-            
+
             Destroy(gameObject);
         }
     }
@@ -31,10 +31,16 @@ public class bullet : MonoBehaviour
         transform.Translate(Vector2.up * 2 * Time.deltaTime, Space.World);
 
 
+
         if (transform.position.y >= 5f)
         {
             Destroy(gameObject);
-        }
+            if (transform.position.magnitude > 5f)
+            {
+                Destroy(this.gameObject);
 
+            }
+
+        }
     }
 }
