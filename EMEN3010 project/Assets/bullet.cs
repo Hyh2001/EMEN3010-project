@@ -31,9 +31,9 @@ public class bullet : MonoBehaviour
         transform.Translate(Vector2.up * 2 * Time.deltaTime, Space.World);
 
 
-        if (transform.position.y >= 5f)
+        if (transform.position.magnitude > 5f)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
 
     }

@@ -72,7 +72,7 @@ public class plane : MonoBehaviour
         
 
      
-        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("z"))
+        if (Input.GetKeyDown("z"))
        {
           Instantiate(bulletPrefab, transform.position, Quaternion.identity);
        }
