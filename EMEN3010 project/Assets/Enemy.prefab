@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4568704348286086544}
   - component: {fileID: 8940081976641733673}
   - component: {fileID: 4623755515218887515}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4573193197121135542}
   - component: {fileID: 4436995052266304178}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: ship2-flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4569223178517655988}
   - component: {fileID: 4437145512461556430}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: ship2-lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}

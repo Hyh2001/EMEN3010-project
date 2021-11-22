@@ -28,7 +28,7 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up * 2 * Time.deltaTime, Space.World);
+        transform.Translate(Vector2.up * 5 * Time.deltaTime, Space.World);
 
 
 
