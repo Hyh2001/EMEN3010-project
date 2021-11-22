@@ -5,6 +5,8 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     public float Speed;
+    Vector2 worldPosLeftBottom;
+    Vector2 worldPosTopRight;
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +30,14 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up * 2 * Time.deltaTime, Space.World);
+        transform.Translate(Vector2.up * 500 * Time.deltaTime, Space.World);
+        worldPosLeftBottom = Camera.main.ViewportToWorldPoint(Vector2.zero);
+        worldPosTopRight = Camera.main.ViewportToWorldPoint(Vector2.one);
 
-
-
-        if (transform.position.y >= 5f)
+        if (transform.position.y >= worldPosTopRight.y)
         {
             Destroy(gameObject);
-            if (transform.position.magnitude > 5f)
+            if (transform.position.magnitude > worldPosTopRight.y)
             {
                 Destroy(this.gameObject);
 

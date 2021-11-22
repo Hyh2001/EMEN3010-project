@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     private float pointY;   
     private float vx;          
     private GameObject player;
+    Vector2 worldPosLeftBottom;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,19 +26,23 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, -Speed, 0) * Time.deltaTime;
-
         
+
+        if (transform.position.y < -420f)
+        {
+            Destroy(gameObject);
+        }
+
+
         if (transform.position.y < pointY)
         {
             transform.position += new Vector3(vx, 0, 0) * Time.deltaTime;
         }
 
-        
-        if (transform.position.y < -5.5f)
-        {
-            Destroy(gameObject);
-        }
+        transform.position += new Vector3(0, -Speed, 0) * Time.deltaTime;
+
+
+
 
     }
 }

@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class plane : MonoBehaviour
 {
     Rigidbody2D plane1;
-    float force = 50.0f;
-    float speed = 100.0f;
+    float force = 500.0f;
+    float speed = 5000.0f;
     Vector2 worldPosLeftBottom;
     Vector2 worldPosTopRight;
     public GameObject bulletPrefab;

@@ -16,7 +16,7 @@ public class EnemyGenerator : MonoBehaviour
     {
         if (Random.Range(0, 650) == 1)
         {
-            Vector3 pos = new Vector3(Random.Range(-2.8f, 2.8f), 5.5f, 0); 
+            Vector3 pos = new Vector3(Random.Range(-280f, 280f), 550f, 0); 
             Instantiate(enemyPrefab, pos, Quaternion.identity);
         }
 
