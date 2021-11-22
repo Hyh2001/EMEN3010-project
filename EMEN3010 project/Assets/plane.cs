@@ -68,6 +68,7 @@ public class plane : MonoBehaviour
 
 
         // the second part will be shoot bullets out
+<<<<<<< Updated upstream
 
 
 
@@ -87,6 +88,15 @@ public class plane : MonoBehaviour
     {
         Debug.Log("Gameover");
         SceneManager.LoadScene("SceneGameover");
+=======
+        
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            Debug.Log("Gameover");
+            //SceneManager.LoadScene("SceneGameover");
+        }
+        //end the game while crash
+>>>>>>> Stashed changes
     }
     //end the game while crash
 }
