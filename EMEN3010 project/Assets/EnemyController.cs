@@ -26,19 +26,23 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, -Speed, 0) * Time.deltaTime;
-
         
+
+        if (transform.position.y < -420f)
+        {
+            Destroy(gameObject);
+        }
+
+
         if (transform.position.y < pointY)
         {
             transform.position += new Vector3(vx, 0, 0) * Time.deltaTime;
         }
 
-        
-        if (transform.position.y < -100f)
-        {
-            Destroy(gameObject);
-        }
+        transform.position += new Vector3(0, -Speed, 0) * Time.deltaTime;
+
+
+
 
     }
 }
