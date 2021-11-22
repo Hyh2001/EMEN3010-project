@@ -68,18 +68,5 @@ public class plane : MonoBehaviour
 
         // the second part will be shoot bullets out
 
-<<<<<<< HEAD
-        
-
-     
-        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("z"))
-       {
-          Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-       }
-=======
-   
->>>>>>> d1b41b59a456c28bbbcc48c45cc5afd2367f468f
-
-
     }
 }

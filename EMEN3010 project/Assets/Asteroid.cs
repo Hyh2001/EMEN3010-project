@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Asteroid : MonoBehaviour
 {
@@ -19,5 +20,6 @@ public class Asteroid : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Gameover");
+        SceneManager.LoadScene("SceneGameover");
     }
 }
