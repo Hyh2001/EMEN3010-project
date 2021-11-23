@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGenerator : MonoBehaviour
+public class QuitGame : MonoBehaviour
 {
-    public GameObject enemyPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +13,9 @@ public class EnemyGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Random.Range(0, 325) == 1)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Vector3 pos = new Vector3(Random.Range(-280f, 280f), 550f, 0); 
-            Instantiate(enemyPrefab, pos, Quaternion.identity);
+            Application.Quit();
         }
-
     }
 }
