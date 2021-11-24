@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 100
+  bulletPrefab: {fileID: 5914155807229644795, guid: 92afcba958118b74cb6a81b0ced8c017, type: 3}
 --- !u!58 &-4244167810019316249
 CircleCollider2D:
   m_ObjectHideFlags: 0
