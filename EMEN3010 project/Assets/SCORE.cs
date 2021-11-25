@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SCORE : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class SCORE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        PlayerPrefs.SetInt("Score", scoreValue);
         score.text = "Score: " + scoreValue;
+        if (scoreValue >= 1000)
+        {
+            SceneManager.LoadScene("SceneWin");
+        }
     }
 }
