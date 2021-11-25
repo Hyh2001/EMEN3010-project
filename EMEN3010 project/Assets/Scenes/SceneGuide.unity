@@ -400,7 +400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 14}
   m_SizeDelta: {x: -341.1877, y: -137.6643}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669354769
@@ -438,7 +438,6 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Guide
 
-
     Using button "Z" to launch a bullet
 
     Using the arrow button
@@ -447,11 +446,12 @@ MonoBehaviour:
 
     Goal
 
-    Survial
+    Kill a jet get 10
+    point
 
-    Kill
-    the BOSS
+    Kill a Mothership get 100 point
 
+    GET 1000 POINT !!!
 
 '
 --- !u!222 &669354770
