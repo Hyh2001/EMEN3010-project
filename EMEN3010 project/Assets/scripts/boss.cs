@@ -122,7 +122,8 @@ public class boss : MonoBehaviour
 
             if (Hp <= 0)
             {
-
+                SCORE.scoreValue += 100;
+                //Destroy to get 100 point
                 Destroy(gameObject);
 
 

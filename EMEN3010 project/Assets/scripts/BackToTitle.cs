@@ -9,6 +9,7 @@ public class BackToTitle : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
+            SCORE.scoreValue = 0;
             SceneManager.LoadScene("SceneStart");
         }
     }

@@ -9,6 +9,7 @@ public class ClearDirector : MonoBehaviour
     {
         if (Input.GetKey("return"))
         {
+            SCORE.scoreValue = 0;
             SceneManager.LoadScene("scene1");
         }
     }

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class plane : MonoBehaviour
 {
     Rigidbody2D plane1;
-    float force = 500.0f;
     float speed = 5000.0f;
     Vector2 worldPosLeftBottom;
     Vector2 worldPosTopRight;

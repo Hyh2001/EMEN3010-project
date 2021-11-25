@@ -19,7 +19,9 @@ public class bullet : MonoBehaviour
 
         if (col.gameObject.tag == "Enemy")
         {
-
+            SCORE.scoreValue += 10;
+            //Get 10 point from destroy the small enemy or
+            //destroy the bullet 
             Destroy(col.gameObject);
 
 
