@@ -1,4 +1,4 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -56,7 +56,7 @@ public class boss : MonoBehaviour
             yield return ShotNCurve(m, 200);
         }
     }
-   
+
     void ShotN(int count, float speed)
     {
         int bulletCount = count;
@@ -68,7 +68,7 @@ public class boss : MonoBehaviour
     }
     IEnumerator WaveNPlayerAimShot(int n, int m)
     {
-        // 4回8方向に撃ちたい
+        // shoot 4 times in 8 directions
         for (int w = 0; w < n; w++)
         {
             yield return new WaitForSeconds(1f);
@@ -88,12 +88,12 @@ public class boss : MonoBehaviour
     }
     void PlayerAimShot(int count, float speed)
     {
-        //この弾幕前にplayerが倒されていたら何もしない
+        //If the player is defeated before this barrage, do nothing
         if (player != null)
         {
-            // 自分からみたPlayerの位置を計算する
+            // Calculate the position of the player as seen from yourself
             Vector3 diffPosition = player.transform.position - transform.position;
-            // 自分から見たPlayerの角度を出す：傾きから角度を出す：アークタンジェントを使う
+            // Get the angle of the player as seen from yourself
             float angleP = Mathf.Atan2(diffPosition.y, diffPosition.x);
 
             int bulletCount = count;
@@ -111,7 +111,7 @@ public class boss : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
-        //BulletとBossが接触した時
+        //Bullet _boss
         if (collision.CompareTag("bullet") == true)
         {
             //Boss Hp
@@ -134,4 +134,3 @@ public class boss : MonoBehaviour
         }
     }
 }
-    

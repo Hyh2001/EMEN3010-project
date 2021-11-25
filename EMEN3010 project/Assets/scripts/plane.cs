@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class plane : MonoBehaviour
 {
     Rigidbody2D plane1;
-    float speed = 5000.0f;
+    float speed = 4500.0f;
     Vector2 worldPosLeftBottom;
     Vector2 worldPosTopRight;
     public GameObject bulletPrefab;
-    public static float px = 0;//自機位置ｘ外部ファイル参照用
-    public static float py = 0;//自機位置ｙ外部ファイル参照用
+    public static float px = 0;
+    public static float py = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,8 +80,9 @@ public class plane : MonoBehaviour
        {
           Instantiate(bulletPrefab, transform.position, Quaternion.identity);
        }
-        px = transform.position.x * 0.7f;//自機狙い弾用
-        py = transform.position.y * 0.7f;//自機狙い弾用
+        //
+        px = transform.position.x * 0.7f;
+        py = transform.position.y * 0.7f;
 
 
 
