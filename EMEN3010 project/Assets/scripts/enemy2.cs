@@ -10,6 +10,8 @@ public class enemy2 : MonoBehaviour
     private GameObject player;
     Vector2 worldPosLeftBottom;
     public GameObject bulletPrefab;
+    AudioSource audioSource;
+    public AudioClip shotSE;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,12 @@ public class enemy2 : MonoBehaviour
             vx = -vx;
         }
         InvokeRepeating("Shot", 2f, 10f);
+        audioSource = GetComponent<AudioSource>();
     }
     void Shot()
     {
         Instantiate(bulletPrefab, transform.position, transform.rotation);
+        audioSource.PlayOneShot(shotSE);
     }
     
 

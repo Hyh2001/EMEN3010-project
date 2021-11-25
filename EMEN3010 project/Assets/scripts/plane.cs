@@ -12,10 +12,13 @@ public class plane : MonoBehaviour
     public GameObject bulletPrefab;
     public static float px = 0;
     public static float py = 0;
+    AudioSource audioSource;//audiosource
+    public AudioClip shotSE;//SE
     // Start is called before the first frame update
     void Start()
     {
         plane1 = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -79,7 +82,8 @@ public class plane : MonoBehaviour
         if (Input.GetKeyDown("z"))
        {
           Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-       }
+            audioSource.PlayOneShot(shotSE);
+        }
         //
         px = transform.position.x * 0.7f;
         py = transform.position.y * 0.7f;

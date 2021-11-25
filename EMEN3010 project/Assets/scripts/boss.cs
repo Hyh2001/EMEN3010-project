@@ -6,7 +6,9 @@ public class boss : MonoBehaviour
 {
     GameObject player;
     public bossbullet bulletPrefab;
-    int Hp = 10;
+    int Hp = 7;
+    AudioSource audioSource;
+    public AudioClip shotSE;
 
 
     // Start is called before the first frame update
@@ -14,11 +16,13 @@ public class boss : MonoBehaviour
     {
         player = GameObject.Find("plane-removebg-preview");
         StartCoroutine(CPU());
+        audioSource = GetComponent<AudioSource>();
     }
     void Shot(float angle, float speed)
     {
         bossbullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
         bullet.Setting(angle, speed); // Mathf.PI/4fは45°
+        audioSource.PlayOneShot(shotSE);
     }
     IEnumerator CPU()
     {
@@ -31,11 +35,11 @@ public class boss : MonoBehaviour
         while (true)
         {
             yield return WaveNShotM(4, 8);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
             yield return WaveNShotMCurve(4, 16);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
             yield return WaveNPlayerAimShot(4, 6);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
         }
     }
     IEnumerator WaveNShotM(int n, int m)
